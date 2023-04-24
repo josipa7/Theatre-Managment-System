@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create new ingredient</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+<a class="navbar-brand" href="#">Theatre Managment System App</a>
+
+<!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+      <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/}">Theatre Managment System App</a>
+      </li>
+    
+    </ul>
+  </div>
+  </nav>
+  <div class = "container">
+		<div class = "row">
+			<div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				
+				<div th:if="${id==null}"><h1 class = "text-center"> Create New Actor </h1></div>
+				<div th:unless="${id==null}"><h1 class = "text-center"> Edit Actor </h1></div>
+				
+				
+				<div class = "card-body">
+				<form th:action="@{/actor/save}" th:object="${actor}" method="post">
+					<input type = "hidden" th:field="*{id}"
+								th:value = "${actor.id}"/>
+						
+				
+				<div class ="form-group">
+							<label> Name: </label>
+							<input type = "text"
+							th:field = "*{name}"
+							class = "form-control" 
+							required/>
+				</div>
+				<div class ="form-group">
+							<label> Surname: </label>
+							<input type = "text"
+							th:field = "*{surname}"
+							class = "form-control" 
+							required/>
+				</div>
+				
+						<div class ="form-group">
+							<label> Contact: </label>
+							<input type = "text"
+							th:field = "*{contact}"
+							class = "form-control" 
+							required/>
+				</div>
+
+					<div class ="form-group">
+							<label> Biography: </label>
+							<textarea
+							
+							th:field = "*{biography}"
+							class = "form-control" />
+				</div>
+				
+				
+				
+				
+		
+				
+				
+				
+				
+					</div>
+
+				
+
+				<div class = "box-footer">
+							<button type="submit" class = "btn btn-primary">
+								Submit
+							</button>
+							
+						</div>
+				
+				</form>
+				
+				
+
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
