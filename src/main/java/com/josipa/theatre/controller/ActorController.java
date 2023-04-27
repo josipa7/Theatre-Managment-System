@@ -1,6 +1,7 @@
 package com.josipa.theatre.controller;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -45,7 +46,7 @@ public class ActorController {
 	
 	@GetMapping("/actor")
 	public String listActors(Model model) {
-		List<Actor> actors=actorRepository.findAll();
+		List<Actor> actors= actorRepository.findAll();
 		
 		model.addAttribute("actors",actors);
 	

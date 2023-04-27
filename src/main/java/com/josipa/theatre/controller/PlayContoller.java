@@ -1,6 +1,7 @@
 package com.josipa.theatre.controller;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,7 +38,7 @@ public class PlayContoller {
 	@GetMapping("/play/new")
 	public String showNewPlayForm(Model model) {
 		List<Genre> genres=genreRepository.findAll();
-		List<Actor> actors=actorRepository.findAll();
+		List<Actor> actors= actorRepository.findAll();
 		
 		model.addAttribute("play",new Play());
 		model.addAttribute("genres",genres);
@@ -70,7 +71,7 @@ public class PlayContoller {
 		model.addAttribute("play",play);
 		
 		List<Genre> genres=genreRepository.findAll();
-		List<Actor> actors=actorRepository.findAll();
+		List<Actor> actors= actorRepository.findAll();
 		
 		model.addAttribute("genres",genres);
 		model.addAttribute("actors",actors);

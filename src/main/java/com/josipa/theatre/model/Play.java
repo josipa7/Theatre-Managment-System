@@ -5,7 +5,10 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.JoinColumn;
@@ -85,13 +88,6 @@ public class Play {
 		this.genre = genre;
 		this.actors = actors;
 	}
-
-
-
-
-
-
-
 
 
 

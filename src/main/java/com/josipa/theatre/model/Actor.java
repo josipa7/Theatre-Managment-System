@@ -2,8 +2,9 @@ package com.josipa.theatre.model;
 
 import java.util.ArrayList;
 import java.util.Date;
-
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
@@ -50,14 +51,21 @@ public class Actor {
 
 
 
-	public Actor(int id, String name, String surname, String contact, String biography) {
+
+
+
+	public Actor(int id, String name, String surname, String contact, String biography, List<Play> plays) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.surname = surname;
 		this.contact = contact;
 		this.biography = biography;
+		this.plays = plays;
 	}
+
+
+
 
 
 
