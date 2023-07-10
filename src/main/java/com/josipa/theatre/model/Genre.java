@@ -21,7 +21,7 @@ public class Genre {
 		
 	}
 	public Genre(int id, String genreName) {
-		super();
+		
 		this.id = id;
 		this.genreName = genreName;
 	}
