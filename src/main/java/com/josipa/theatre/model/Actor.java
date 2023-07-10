@@ -55,7 +55,7 @@ public class Actor {
 
 
 	public Actor(int id, String name, String surname, String contact, String biography, List<Play> plays) {
-		super();
+	
 		this.id = id;
 		this.name = name;
 		this.surname = surname;
