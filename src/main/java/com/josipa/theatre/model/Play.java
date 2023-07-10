@@ -79,7 +79,7 @@ public class Play {
 
 	public Play(int id, String title, String director, LocalDate time, LocalTime time2, Genre genre,
 			List<Actor> actors) {
-		super();
+		
 		this.id = id;
 		this.title = title;
 		this.director = director;
